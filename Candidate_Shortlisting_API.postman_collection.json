@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "c1f7a0b5-7c2a-4f51-b8f9-4d6d3c8c12f4",
+		"name": "Candidate Shortlisting API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Candidates",
+			"item": [
+				{
+					"name": "Add Candidate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Rahul Sharma\",\n  \"email\": \"rahul@gmail.com\",\n  \"skills\": [\"React\", \"Node.js\", \"MongoDB\"],\n  \"experience\": 2,\n  \"bio\": \"Built several MERN stack applications.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/candidates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"candidates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Candidates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/candidates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"candidates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Match",
+			"item": [
+				{
+					"name": "Basic Shortlisting",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"requiredSkills\": [\"React\", \"Node.js\"],\n  \"minExperience\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/match",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"match"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AI Shortlisting",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"requiredSkills\": [\"React\", \"Node.js\"],\n  \"minExperience\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/match/ai/shortlist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"match",
+								"ai",
+								"shortlist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
