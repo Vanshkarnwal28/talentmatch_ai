@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://talentmatch-ai-ynyz.onrender.com/api';
 
 export const addCandidate = async (candidateData) => {
   const response = await axios.post(`${API_URL}/candidates`, candidateData);
